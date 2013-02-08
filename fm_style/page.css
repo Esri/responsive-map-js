@@ -1,0 +1,488 @@
+/*
+*	Symbols used on this app are from various contributors from thenounproject.com collection.
+*	For more imformation, visit thenounproject.com.
+*/
+
+/* Start Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+* { outline: none;}
+/* End Reset CSS */
+
+body{
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	color: #222;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header, footer, nav{
+	display: block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	z-index: 150;
+}
+footer, header .fm_title_bar{
+	text-align: center;
+	margin: 0px auto;
+}
+nav .fm_nav { height: 100%; }
+
+.fm_container{ margin: 10px; }
+nav .fm_container { margin: 0px; }
+
+header, footer{
+	background-color: #222;
+	color: white;
+}
+footer{
+	-webkit-box-shadow: 0px 0px 15px -2px black;
+	-moz-box-shadow: 0px 0px 15px -2px black;
+	box-shadow: 0px 0px 15px -2px black;
+}
+nav {
+	background-color: #5e5e5e;
+
+	-webkit-box-shadow: 0px 0px 15px -2px black;
+	-moz-box-shadow: 0px 0px 15px -2px black;
+	box-shadow: 0px 0px 15px -2px black;
+}
+.fm_right_content {
+	background-color: white;
+	z-index: 500;
+
+	-webkit-box-shadow: 0px 0px 15px -4px black;
+	-moz-box-shadow: 0px 0px 15px -4px black;
+	box-shadow: 0px 0px 15px -4px black;
+}
+
+.fm_container_main{
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	left: 0px;
+	right: 0px;
+}
+
+.fm_left_content,
+.fm_center_content,
+.fm_right_content{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	font-size: .9em;
+	overflow-y: auto;
+	overflow-x: hidden;
+	word-wrap: break-word;
+}
+
+.fm_map {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.fm_find_me{
+	position: absolute;
+	top: 78px;
+	left: 10px;
+	z-index: 480;
+	cursor: pointer;
+}
+.fm_find_me.fm_on { background: url(fm_icons/crosshairs-gray-on.png) no-repeat; }
+
+.fm_overlay{
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 1000;
+
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+
+	-webkit-box-shadow: 0 0 0 10px rgba(34,34,34,.6);
+	-moz-box-shadow: 0 0 0 10px rgba(34,34,34,.6);
+	box-shadow: 0 0 0 10px rgba(34,34,34,.6);
+	*box-shadow: 0 0 0 10px rgba(154,179,199,.8);
+}
+
+.fm_trigger, .fm_panel{ display: none; }
+
+.fm_close{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	cursor: pointer;
+	z-index: 800;
+}
+.fm_close_icon{
+	width: 20px;
+	height: 20px;
+}
+
+.fm_hide{
+	display: none;
+}
+
+.fm_toolbar {
+	position: relative;
+	top: -2px;
+	float: right;
+}
+
+.fm_basemap_image{
+	width: 130px;
+
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+
+	-webkit-box-shadow: 0 0 0 6px white, 0 0 0 7px black;
+	-moz-box-shadow: 0 0 0 6px white, 0 0 0 7px black;
+	box-shadow: 0 0 0 6px white, 0 0 0 7px black;
+}
+.fm_basemap_option{
+	font-family: sans-serif;
+	color: black;
+	text-decoration: none;
+	font-size: .8em;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+.fm_basemap_option label { display: block; margin-top: 5px;}
+
+.fm_icon_text { display: none; }
+.fm_icon_text.fm_show{ display: inline; }
+
+.fm_map_info {
+    font-size: 0.75em;
+	padding-top: .25em;
+}
+
+.fm_embed_code{
+	width: 100%;
+	height: 13em;
+	margin-top: 10px;
+}
+
+/** buttons, icons, inputs **/
+.fm_trigger, .fm_button { display: inline-block; }
+
+.fm_location_input {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	font-size: 1em;
+	border: none;
+	padding: 0 5px 0 5px;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	width: 85%;
+}
+
+.fm_location_button{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-size: 1em 1em;
+}
+/***************************/
+
+/* anything but phone */
+@media all and (min-width: 768px){
+	/* desktop images */
+	.fm_basemap_icon{ background: url(fm_icons/map2-w.png) no-repeat; }
+	.fm_measure_icon{ background: url(fm_icons/ruler3-w.png) no-repeat; }
+	.fm_details_icon{ background: url(fm_icons/info2-w.png) no-repeat; }
+	.fm_legend_icon{ background: url(fm_icons/key-w.png) no-repeat; }
+	.fm_print_icon{ background: url(fm_icons/printer-w.png) no-repeat; }
+	.fm_share_icon{ background: url(fm_icons/share2-w.png) no-repeat; }
+	.fm_search_icon{ background: url(fm_icons/search2-w.png) no-repeat; }
+	.fm_settings_icon{ background: url(fm_icons/settings-w.png) no-repeat; }
+
+	.fm_button_active .fm_basemap_icon, .fm_button:hover .fm_basemap_icon{ background: url(fm_icons/map2.png) no-repeat; }
+	.fm_button_active .fm_measure_icon, .fm_button:hover .fm_measure_icon{ background: url(fm_icons/ruler3.png) no-repeat; }
+	.fm_button_active .fm_details_icon, .fm_button:hover .fm_details_icon{ background: url(fm_icons/info2.png) no-repeat; }
+	.fm_button_active .fm_legend_icon, .fm_button:hover .fm_legend_icon{ background: url(fm_icons/key.png) no-repeat; }
+	.fm_button_active .fm_print_icon, .fm_button:hover .fm_print_icon{ background: url(fm_icons/printer.png) no-repeat; }
+	.fm_button_active .fm_share_icon, .fm_button:hover .fm_share_icon{ background: url(fm_icons/share2.png) no-repeat; }
+	.fm_button_active .fm_search_icon, .fm_button:hover .fm_search_icon{ background: url(fm_icons/search2.png) no-repeat; }
+	.fm_button_active .fm_settings_icon, .fm_button:hover .fm_settings_icon{ background: url(fm_icons/settings.png) no-repeat; }
+
+	.fm_close{ background: url(fm_icons/close.png) no-repeat; }
+	
+	.fm_button{
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 1em;
+		font-weight: bold;
+		*color: black;
+		color: white;
+		text-decoration: none;
+		border: none;
+		background: none;
+		padding: 0px 5px 0px 5px;
+		display: inline-block;
+		height: 100%;
+	}
+
+	.fm_button_active { background-color: white; }
+	/* end desktop images */
+	
+	header{
+		top: 0px;
+		height: 2.5em;
+	}
+	footer{
+		bottom: 0px;
+		height: 1.5em;
+	}
+	nav{
+		top: 2.5em;
+		margin: 0;
+		padding: 0;
+		height: 2.2em;
+	}
+	header .fm_title_bar {font-size: 1.5em; margin-top: .2em; }
+	.fm_container_main{
+		top: 4.7em;
+		bottom: 1.5em;
+	}
+
+	.fm_right_content{ right: 0; width: 300px;}
+	.fm_center_content{ left: 0; right: 300px;}
+
+	nav .fm_nav { width: 98%; margin: 0 auto; }
+
+	.fm_float_right{ float: right; }
+
+	.fm_basemap_list{
+		top: 10em;
+		height: 260px;
+		width: 500px;
+		left: 30%;
+		overflow: auto;
+	}
+	#basemapList { width: 100%; }
+	
+	.fm_measurement{
+		top: 10em;
+		height: 120px;
+		width: 250px;
+		left: 30%;
+	}
+	.fm_search{
+		left: 35%;
+		right: 35%;
+		top: 8em;
+	}
+
+	.fm_button:hover{
+		color: black;
+		background-color: #fff;
+	}
+	.fm_button .fm_icon, .fm_button:hover .fm_icon{
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		background-size: 24px 24px;
+	}
+	.fm_icon{
+		position: relative;
+		top: 6px;
+	}
+
+	.fm_close{
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+		background-size: 20px 20px;
+	}
+
+	.fm_button { margin: 0 3px; }
+}
+
+/* laptop */
+@media all and (max-width: 1279px){
+	.*fm_center_content.fm_right{
+		right: 0px;
+	}
+	.*fm_center_content.fm_left{
+		left: 0px;
+	}
+	.fm_search{
+		left: 30%;
+		right: 30%;
+	}
+}
+
+/* tab */
+@media all and (max-width: 1024px){
+	.fm_right_content{
+		display: none;
+	}
+	.fm_center_content{
+		left: 0px;
+		right: 0px;
+	}
+	.fm_search{
+		left: 25%;
+		right: 25%;
+	}
+
+	.fm_panel{ padding-top: 30px; }
+}
+
+/* phone */
+@media all and (max-width: 767px){
+	/* image overrides */
+	.fm_basemap_icon{ background: url(fm_mobile_icons/map2-w.png) no-repeat; }
+	.fm_measure_icon{ background: url(fm_mobile_icons/ruler3-w.png) no-repeat; }
+	.fm_details_icon{ background: url(fm_mobile_icons/info2-w.png) no-repeat; }
+	.fm_legend_icon{ background: url(fm_mobile_icons/key-w.png) no-repeat; }
+	.fm_print_icon{ background: url(fm_mobile_icons/printer-w.png) no-repeat; }
+	.fm_share_icon{ background: url(fm_mobile_icons/share2-w.png) no-repeat; }
+	.fm_search_icon{ background: url(fm_mobile_icons/search2-w.png) no-repeat; }
+	.fm_settings_icon{ background: url(fm_mobile_icons/settings-w.png) no-repeat; }
+
+	.fm_button_active .fm_basemap_icon, .fm_button:hover .fm_basemap_icon{ background: url(fm_mobile_icons/map2.png) no-repeat; }
+	.fm_button_active .fm_measure_icon, .fm_button:hover .fm_measure_icon{ background: url(fm_mobile_icons/ruler3.png) no-repeat; }
+	.fm_button_active .fm_details_icon, .fm_button:hover .fm_details_icon{ background: url(fm_mobile_icons/info2.png) no-repeat; }
+	.fm_button_active .fm_legend_icon, .fm_button:hover .fm_legend_icon{ background: url(fm_mobile_icons/key.png) no-repeat; }
+	.fm_button_active .fm_print_icon, .fm_button:hover .fm_print_icon{ background: url(fm_mobile_icons/printer.png) no-repeat; }
+	.fm_button_active .fm_share_icon, .fm_button:hover .fm_share_icon{ background: url(fm_mobile_icons/share2.png) no-repeat; }
+	.fm_button_active .fm_search_icon, .fm_button:hover .fm_search_icon{ background: url(fm_mobile_icons/search2.png) no-repeat; }
+	.fm_button_active .fm_settings_icon, .fm_button:hover .fm_settings_icon{ background: url(fm_mobile_icons/settings.png) no-repeat; }
+	
+	.fm_close{ background: url(fm_mobile_icons/close.png) no-repeat; }
+	/* end image overrides */
+	
+	.fm_right_content, .fm_left_content{
+		display: none;
+		left: 0px;
+		right: 0px;
+
+		-webkit-box-shadow: 0 0 0 black;
+		-moz-box-shadow: 0 0 0 black;
+		box-shadow: 0 0 0 black;
+	}
+	.fm_center_content{
+		left: 0px;
+		right: 0px;
+		bottom: 0;
+	}
+
+	header{
+		height: 1.8em;
+
+		-webkit-box-shadow: 0px 0px 15px -2px black;
+		-moz-box-shadow: 0px 0px 15px -2px black;
+		box-shadow: 0px 0px 15px -2px black;
+	}
+	footer{ display: none; }
+	nav{ bottom: 0px; height: 2.6em; }
+	.fm_container_main{ top: 1.8em; bottom: 2.6em; }
+
+	header .fm_title_bar { font-size: 1.2em; margin: .1em; }
+
+	nav{
+		overflow-x: auto;
+		overflow-y: hidden;
+		background-color: #222;
+	}
+	nav .fm_nav {
+		display: block;
+		min-width: 380px;
+		text-align: center;
+	}
+
+	.fm_overlay, .fm_search{
+		bottom: 4em;
+		left: 20px;
+		right: 20px;
+	}
+	.fm_measurement{
+		height: 120px;
+	}
+	.fm_basemap_image{ width: 120px; }
+	.fm_basemap_list{ max-height: 80%; overflow-y: auto;}
+
+	.fm_button{
+		width: 32px;
+		height: 100%;
+		margin: 0px;
+		padding: 5px 5px;
+	}
+	.fm_button .fm_icon, .fm_button:hover .fm_icon {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		background-size: 32px 32px;
+		*padding: 5px;
+	}
+	.fm_button:hover, .fm_button_active{ background-color: white; }
+	
+	.fm_icon_text, .fm_icon_text.fm_show { display: none; margin: 0px; padding: 0px; }
+	
+	.fm_close{
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+		background-size: 20px 20px;
+	}
+
+	.fm_location_input{
+		font-size: 2em;
+		width: 80%;
+	}
+	.fm_location_button{
+		position: relative;
+		top: 2px;
+		width: 2em;
+		height: 2em;
+		display: inline-block;
+		background-size:2em 2em;
+	}
+
+	.fm_panel{ padding-top: 30px; }
+	.fm_float_right{ float: none; }
+}
+
+/* override elements */
+.fm_no_margin { margin: 0; }
+
+/* webkit scrollbar */
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3) inset;
+	box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: rgba(34,34,34,.7);
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,.6) inset;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(34,34,34,.1);
+}

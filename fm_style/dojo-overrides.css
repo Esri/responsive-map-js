@@ -1,0 +1,17 @@
+.dijitPopup, .dijitMenuPopup {
+	
+}
+.dijitMenuPopup table{
+	outline: none;
+	border: 1px solid gray;
+}
+.dijitMenuPopup td{
+	font-family: serif;
+	font-size: .9em;
+}
+
+.esriMobileNavigationBar, .esriMobileInfoView, .esriMobilePopupInfoView, .esriPopupWrapper{
+	z-index: 500;
+}
+
+.esriScalebarLabel, .esriScalebarFirstNumber, .esriScalebarSecondNumber{ width: auto !important;}

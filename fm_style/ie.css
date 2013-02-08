@@ -1,0 +1,119 @@
+	header{
+		top: 0px;
+		height: 2.5em;
+	}
+	footer{
+		bottom: 0px;
+		height: 1.5em;
+	}
+	nav{
+		top: 2.5em;
+		margin: 0;
+		padding: 0;
+		height: 2.2em;
+	}
+	header .fm_title_bar {font-size: 1.5em; margin-top: .2em; }
+	.fm_container_main{
+		top: 4.7em;
+		bottom: 1.5em;
+	}
+
+	.fm_right_content{ right: 0; width: 300px;}
+	.fm_center_content{ left: 0; right: 300px;}
+
+	nav .fm_nav { width: 98%; margin: 0 auto; }
+
+	.fm_float_right{ float: right; }
+
+	.fm_basemap_list{
+		top: 10em;
+		height: 260px;
+		width: 500px;
+		left: 30%;
+		overflow: auto;
+	}
+	.fm_measurement{
+		top: 10em;
+		height: 120px;
+		width: 250px;
+		left: 30%;
+	}
+	.fm_search{
+		left: 35%;
+		right: 35%;
+		top: 8em;
+	}
+
+	.fm_button:hover .fm_basemap_icon{ background: url(fm_icons/map2.png) no-repeat; }
+	.fm_button:hover .fm_measure_icon{ background: url(fm_icons/ruler3.png) no-repeat; }
+	.fm_button:hover .fm_details_icon{ background: url(fm_icons/info2.png) no-repeat; }
+	.fm_button:hover .fm_legend_icon{ background: url(fm_icons/key.png) no-repeat; }
+	.fm_button:hover .fm_print_icon{ background: url(fm_icons/printer.png) no-repeat; }
+	.fm_button:hover .fm_share_icon{ background: url(fm_icons/share2.png) no-repeat; }
+	.fm_button:hover .fm_search_icon{ background: url(fm_icons/search2.png) no-repeat; }
+	.fm_button:hover .fm_settings_icon{ background: url(fm_icons/settings.png) no-repeat; }
+
+	.fm_button:hover{
+		color: black;
+		background-color: #fff;
+	}
+	.fm_button .fm_icon, .fm_button:hover .fm_icon{
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		background-size: 24px 24px;
+	}
+	.fm_icon{
+		position: relative;
+		top: 6px;
+	}
+
+	.fm_close{
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+		background-size: 20px 20px;
+	}
+
+	.fm_button { margin: 0 3px; }
+	
+	/* desktop images */
+	.fm_basemap_icon{ background: url(fm_icons/map2-w.png) no-repeat; }
+	.fm_measure_icon{ background: url(fm_icons/ruler3-w.png) no-repeat; }
+	.fm_details_icon{ background: url(fm_icons/info2-w.png) no-repeat; }
+	.fm_legend_icon{ background: url(fm_icons/key-w.png) no-repeat; }
+	.fm_print_icon{ background: url(fm_icons/printer-w.png) no-repeat; }
+	.fm_share_icon{ background: url(fm_icons/share2-w.png) no-repeat; }
+	.fm_search_icon{ background: url(fm_icons/search2-w.png) no-repeat; }
+	.fm_settings_icon{ background: url(fm_icons/settings-w.png) no-repeat; }
+
+	.fm_button_active .fm_basemap_icon{ background: url(fm_icons/map2.png) no-repeat; }
+	.fm_button_active .fm_measure_icon{ background: url(fm_icons/ruler3.png) no-repeat; }
+	.fm_button_active .fm_details_icon{ background: url(fm_icons/info2.png) no-repeat; }
+	.fm_button_active .fm_legend_icon{ background: url(fm_icons/key.png) no-repeat; }
+	.fm_button_active .fm_print_icon{ background: url(fm_icons/printer.png) no-repeat; }
+	.fm_button_active .fm_share_icon{ background: url(fm_icons/share2.png) no-repeat; }
+	.fm_button_active .fm_search_icon{ background: url(fm_icons/search2.png) no-repeat; }
+	.fm_button_active .fm_settings_icon{ background: url(fm_icons/settings.png) no-repeat; }
+
+	.fm_close{ background: url(fm_icons/close.png) no-repeat; }
+
+	/** IE fixes - do not override **/
+	body{ min-width: 768px; overflow-x : auto;}
+	
+	.fm_right_content{
+		border-left: 1px solid #222;
+	}
+	.fm_button{
+		position: relative;
+		float: left;
+	}
+	.fm_button.fm_float_right{
+		position: relative;
+		float: right;
+	}
+	.fm_button .fm_icon_text{
+		position: relative;
+		top: 4px;
+		margin: 0 3px 0 3px;
+	}
