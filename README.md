@@ -1,17 +1,40 @@
-#Responsive Map Viewer Boilerplate and Samples
+# Responsive Map JS
 
-Responsive map viewer boilerplate for ArcGIS JS API based web mapping applications. Works with ArcGIS.com webmaps.
+Responsive map js is a custom responsive framework for ArcGIS JS API based web mapping applications. Works with ArcGIS.com webmaps.
 
-Give it a try! [View it live] (http://maps.esri.com/SP_DEMOS/responsive/index.html)
+Warning: This is a very rough first attempt to create a responsive mapping template and it still requires updates and re-org.  It works well on devices and browsers however.
 
-## Note
+[View demos live] (http://maps.esri.com/SP_DEMOS/responsive/index.html)
 
-This is a very rough first attempt to create a responsive mapping template. Requires lots of updates and re-org. Works well on devices and browsers.
+![App](https://raw.github.com/Esri/responsive-map-js/master/responsive-map-js.png)
+
+## Features
+* Responsive mapping app in mobile and desktop devices
+* Media queries at 768, 1024 and 1279
+* Mobile and desktop friedly icons 
+* Loads ArcGIS maps and web maps
+
+# Instructions
+
+1. Fork and then clone the repo or download the .zip file. 
+2. Run and try the [demos](http://maps.esri.com/SP_DEMOS/responsive/index.html).
+
+## Requirements
+
+* Notepad or your favorite HTML editor
+
+## Resources
+
+* [ArcGIS for JavaScript API Resource Center](http://help.arcgis.com/en/webapi/javascript/arcgis/index.html)
+* [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 
 ## Issues
 
 Find a bug or want to request a new feature?  Please let us know by submitting an issue.
 
+## Contributing
+
+Anyone and everyone is welcome to contribute. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
 
@@ -27,5 +50,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[](Esri Tags: ArcGIS JSAPI webmap html5 mobile)
+A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/responsive-map-js/master/license.txt) file.
+
+
+[](Esri Tags: ArcGIS JSAPI Webmap Html5 Mobile Responsive)
 [](Esri Language: JavaScript)
