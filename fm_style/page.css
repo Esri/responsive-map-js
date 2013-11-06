@@ -93,10 +93,15 @@ nav {
 	right: 0;
 }
 
+.fm_map .esriSimpleSlider {
+	left: 15px;
+	top: 15px;
+}
+
 .fm_find_me{
 	position: absolute;
-	top: 78px;
-	left: 10px;
+	top: 88px;
+	left: 15px;
 	z-index: 480;
 	cursor: pointer;
 }

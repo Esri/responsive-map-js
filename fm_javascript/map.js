@@ -5,7 +5,7 @@ dojo.require("esri.dijit.Scalebar");
 //dojo.require("esri.layers.FeatureLayer");
 
 dojo.require("esri.map");
-dojo.require("esri.tasks.Locator");
+dojo.require("esri.tasks.locator");
 dojo.require("esri.arcgis.utils");
 
 var map;
@@ -278,7 +278,7 @@ function locateAddress(evt, addr) {
     var address = addr.trim();
 
     if (!geocoder) {
-        geocoder = new esri.tasks.Locator("//tasks.arcgis.com/ArcGIS/rest/services/WorldLocator/GeocodeServer");
+        geocoder = new esri.tasks.Locator("//geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer");
         geocoder.outSpatialReference = map.spatialReference;
     }
 
